@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rakesh Chavhan</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+        .x-bad {
+            margin: 2px;
+            width: 150px;
+            height: 50px;
+            background: red !important;
+            position: relative;
+        }
+
+        .x-bad:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            /* border-left: 25px solid #7eb4e2; */
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+        .x-bad:before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-right: 25px solid red !important;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+        .bad {
+            margin: 2px;
+            width: 150px;
+            height: 50px;
+            background: #FF6666 !important;
+            position: relative;
+        }
+
+        .bad:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            /* border-left: 25px solid #7eb4e2; */
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+        .bad:before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-right: 25px solid #FF6666 !important;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+
+        .neutral{
+            margin: 2px;
+            width: 150px;
+            height: 50px;
+            background: #FFBF00 !important;
+            position: relative;
+        }
+
+        .neutral:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            /* border-left: 25px solid #7eb4e2; */
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+        .neutral:before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-right: 25px solid #FFBF00 !important;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+
+        .good {
+            margin: 2px;
+            width: 150px;
+            height: 50px;
+            background: #00CC22 !important;
+            position: relative;
+        }
+
+        .good:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            /* border-left: 25px solid #7eb4e2; */
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+        .good:before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-right: 25px solid #00CC22 !important;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+
+        .x-good {
+            margin: 2px;
+            width: 150px;
+            height: 50px;
+            background: green !important;
+            position: relative;
+        }
+
+        .x-good:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            /* border-left: 25px solid #7eb4e2; */
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+        .x-good:before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-right: 25px solid green !important;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+        .x-good-l {
+            margin: 2px;
+            width: 150px;
+            height: 50px;
+            background: green !important;
+            position: relative;
+        }
+
+        .x-good-l:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            /* border-left: 25px solid #7eb4e2; */
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+        .x-good-l:before {
+            content: '';
+            position: absolute;
+            right: -25px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 25px solid green !important;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+        .arrow-pointer {
+            margin: 2px;
+            width: 150px;
+            height: 50px;
+            background: #32557f;
+            position: relative;
+        }
+
+        .arrow-pointer- {
+            margin: 2px;
+            width: 150px;
+            height: 50px;
+            background: #32557f;
+            position: relative;
+        }
+
+        .arrow-pointer:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            /* border-left: 25px solid #7eb4e2; */
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+        .arrow-pointer:before {
+            content: '';
+            position: absolute;
+            right: -25px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 25px solid #32557f;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+        .arrow-pointer-right {
+            margin: 2px;
+            width: 150px;
+            height: 50px;
+            background: #32557f;
+            position: relative;
+        }
+
+        .arrow-pointer-right:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            /* border-left: 25px solid #7eb4e2; */
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+        .arrow-pointer-right:before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-right: 25px solid #32557f;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+        #middle {
+            /* margin-top:50px;
+            margin-bottom:50px; */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+        }
+
+        label {
+            display: flex;
+            width: 100px;
+            height: 100px;
+            font-size: 24px;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            color: #000;
+            cursor: pointer;
+        }
+
+        label {
+            border-left: 1px #999 solid;
+            transition: .3s;
+        }
+
+        input[type='radio'] {
+            display: none;
+        }
+
+        input[type='radio']:hover~label,
+        input[type='radio']:checked~label {
+            background: none;
+            color: #fff;
+        }
+        </style>
+    </head>
+
+    <body>
+        <section id="middle">
+            <form action="#" method="post" id="Form" >
+            <!-- <h5 class="text-center mb-5">Please rate of satisfaction on the following attribute of our service.</h5> -->
+            <div class="container">
+                <h4 class="text-center mb-3">Responsiveness</h4>
+
+
+
+                <ul style="list-style-type:none; display:flex;">
+                    <li>Extremely Bad
+
+                        <label class="arrow-pointer-right" id="label_1" for="rata_1"></label>
+                        <input type="radio" class="checkbox1" name="res_rating" value="1" id="rata_1" >
+                    </li>
+                    <li>Bad
+                        <label class="arrow-pointer-" id="label_2" for="rata_2"></label>
+
+                        <input type="radio" class="checkbox1" name="res_rating" value="2" id="rata_2">
+                    </li>
+                    <li>Neutral
+                        <label class="arrow-pointer-" id="label_3" for="rata_3"></label>
+
+                        <input type="radio" class="checkbox1" name="res_rating" value="3" id="rata_3">
+                    </li>
+                    <li>Good
+                        <label class="arrow-pointer-" id="label_4" for="rata_4"></label>
+                        <input type="radio" class="checkbox1" name="res_rating" value="4" id="rata_4">
+                    </li>
+                    <li>Extremely Good
+                        <label class="arrow-pointer" id="label_5" for="rata_5"></label>
+                        <input type="radio" class="checkbox1" name="res_rating" value="5" id="rata_5">
+                    </li>
+                </ul>
+
+
+            </div>
+
+            <div class="container">
+                <h4 class="text-center mb-3">Competency in advicing right solution</h4>
+                <ul style="list-style-type:none; display:flex;">
+                    <li>Extremely Bad
+
+                        <label class="arrow-pointer-right" id="label_6"  for="rata_6"></label>
+                        <input type="radio" class="checkbox2" name="comp_rating"  value="1" id="rata_6" >
+                    </li>
+                    <li>Bad
+                        <label class="arrow-pointer-" id="label_7" for="rata_7"></label>
+
+                        <input type="radio" class="checkbox2" name="comp_rating" value="2"  id="rata_7">
+                    </li>
+                    <li>Neutral
+                        <label class="arrow-pointer-" id="label_8" for="rata_8"></label>
+
+                        <input type="radio" class="checkbox2" name="comp_rating" value="3"  id="rata_8">
+                    </li>
+                    <li>Good
+                        <label class="arrow-pointer-" id="label_9" for="rata_9"></label>
+                        <input type="radio" class="checkbox2" name="comp_rating" value="4"  id="rata_9">
+                    </li>
+                    <li>Extremely Good
+                        <label class="arrow-pointer" id="label_10" for="rata_10"></label>
+                        <input type="radio" class="checkbox2" name="comp_rating" value="5"  id="rata_10">
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="container">
+                <h4 class="text-center mb-3">Trustworthiness</h4>
+                <ul style="list-style-type:none; display:flex;">
+                    <li>Extremely Bad
+
+                        <label class="arrow-pointer-right" id="label_11" for="rata_11"></label>
+                        <input type="radio" class="checkbox3" name="trust_rating" value="1"  id="rata_11" >
+                    </li>
+                    <li>Bad
+                        <label class="arrow-pointer-" id="label_12" for="rata_12"></label>
+
+                        <input type="radio" class="checkbox3" name="trust_rating" value="2"  id="rata_12">
+                    </li>
+                    <li>Neutral
+                        <label class="arrow-pointer-" id="label_13" for="rata_13"></label>
+
+                        <input type="radio" class="checkbox3" name="trust_rating" value="3"  id="rata_13">
+                    </li>
+                    <li>Good
+                        <label class="arrow-pointer-" id="label_14" for="rata_14"></label>
+                        <input type="radio" class="checkbox3" name="trust_rating" value="4"  id="rata_14">
+                    </li>
+                    <li>Extremely Good
+                        <label class="arrow-pointer" id="label_15" for="rata_15"></label>
+                        <input type="radio" class="checkbox3" name="trust_rating" value="5"  id="rata_15">
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="container">
+                <h4 class="text-center mb-3">Customer service and support</h4>
+                <ul style="list-style-type:none; display:flex;">
+                    <li>Extremely Bad
+
+                        <label class="arrow-pointer-right" id="label_16" for="rata_16"></label>
+                        <input type="radio" class="checkbox4" name="cust_rating" value="1"  id="rata_16" >
+                    </li>
+                    <li>Bad
+                        <label class="arrow-pointer-" id="label_17" for="rata_17"></label>
+
+                        <input type="radio" class="checkbox4" name="cust_rating" value="2"  id="rata_17">
+                    </li>
+                    <li>Neutral
+                        <label class="arrow-pointer-" id="label_18" for="rata_18"></label>
+
+                        <input type="radio" class="checkbox4" name="cust_rating" value="3"  id="rata_18">
+                    </li>
+                    <li>Good
+                        <label class="arrow-pointer-" id="label_19" for="rata_19"></label>
+                        <input type="radio" class="checkbox4" name="cust_rating" value="4"  id="rata_19">
+                    </li>
+                    <li>Extremely Good
+                        <label class="arrow-pointer" id="label_20" for="rata_20"></label>
+                        <input type="radio" class="checkbox4" name="cust_rating" value="5"  id="rata_20">
+                    </li>
+                </ul>
+
+
+            </div>
+            <hr>
+
+            <button type="submit"  class="btn btn-success btn-sm text-center pl-5 pr-5">Next</button>
+            </form>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+    </body>
+    <script>
+// $(document).ready(function()){
+    
+//     if ($('input[type="radio"]').is(":checked")) {
+        
+//         document.getElementById(this).classList.add('x-bad');
+//     }
+
+// });
+
+    $('.checkbox1').change(function() {
+        if ($(this).is(":checked")) {
+            if ($(this).val() == 1) {
+                document.getElementById("label_1").classList.add('x-bad');
+                document.getElementById("label_1").classList.remove('bad');
+                document.getElementById("label_1").classList.remove('neutral');
+                document.getElementById("label_1").classList.remove('good');
+                document.getElementById("label_1").classList.remove('x-good');
+                document.getElementById("label_5").classList.remove('x-good-l');
+                ['label_2', 'label_3', 'label_4', 'label_5'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+            } else if ($(this).val() == 2) {
+                document.getElementById("label_1").classList.remove('x-bad');
+                document.getElementById("label_1").classList.add('bad');
+                document.getElementById("label_1").classList.remove('neutral');
+                document.getElementById("label_1").classList.remove('good');
+                document.getElementById("label_1").classList.remove('x-good');
+                document.getElementById("label_5").classList.remove('x-good-l');
+                ['label_1', 'label_2'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#FF6666";
+
+                });
+                ['label_3', 'label_4', 'label_5'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+
+
+            } else if ($(this).val() == 3) {
+                document.getElementById("label_1").classList.remove('x-bad');
+                document.getElementById("label_1").classList.remove('bad');
+                document.getElementById("label_1").classList.add('neutral');
+                document.getElementById("label_1").classList.remove('good');
+                document.getElementById("label_1").classList.remove('x-good');
+                document.getElementById("label_5").classList.remove('x-good-l');
+                ['label_1', 'label_2', 'label_3'].forEach(function(id) {
+                    document.getElementById(id).style.backgroundColor = "#FFBF00";
+
+                });
+                ['label_4', 'label_5'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+
+            } else if ($(this).val() == 4) {
+                document.getElementById("label_1").classList.remove('x-bad');
+                document.getElementById("label_1").classList.remove('bad');
+                document.getElementById("label_1").classList.remove('neutral');
+                document.getElementById("label_1").classList.add('good');
+                document.getElementById("label_1").classList.remove('x-good');
+                document.getElementById("label_5").classList.remove('x-good-l');
+
+                ['label_1', 'label_2', 'label_3', 'label_4'].forEach(function(id) {
+
+                    document.getElementById(id).style.backgroundColor = "#00CC22";
+
+                });
+                ['label_5'].forEach(function(id) {
+                    
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+
+            } else if ($(this).val() == 5) {
+                document.getElementById("label_1").classList.remove('x-bad');
+                document.getElementById("label_1").classList.remove('bad');
+                document.getElementById("label_1").classList.remove('neutral');
+                document.getElementById("label_1").classList.remove('good');
+                document.getElementById("label_1").classList.add('x-good');
+                document.getElementById("label_5").classList.add('x-good-l');
+                ['label_1', 'label_2', 'label_3', 'label_4', 'label_5'].forEach(function(id) {
+
+                    document.getElementById(id).style.backgroundColor = "green";
+
+                });
+            }
+        }else{
+                document.getElementById("label_1").classList.remove('x-bad');
+                
+        }
+
+    });
+
+    $('.checkbox2').change(function() {
+        if ($(this).is(":checked")) {
+            
+            if ($(this).val() == 1) {
+                
+                document.getElementById("label_6").classList.add('x-bad');
+                document.getElementById("label_6").classList.remove('bad');
+                document.getElementById("label_6").classList.remove('neutral');
+                document.getElementById("label_6").classList.remove('good');
+                document.getElementById("label_6").classList.remove('x-good');
+                document.getElementById("label_10").classList.remove('x-good-l');
+                ['label_10', 'label_7', 'label_8', 'label_9'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+            } else if ($(this).val() == 2) {
+                document.getElementById("label_6").classList.remove('x-bad');
+                document.getElementById("label_6").classList.add('bad');
+                document.getElementById("label_6").classList.remove('neutral');
+                document.getElementById("label_6").classList.remove('good');
+                document.getElementById("label_6").classList.remove('x-good');
+                document.getElementById("label_10").classList.remove('x-good-l');
+                ['label_7', 'label_6'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#FF6666";
+
+                });
+                ['label_8', 'label_9', 'label_10'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+
+
+            } else if ($(this).val() == 3) {
+                document.getElementById("label_6").classList.remove('x-bad');
+                document.getElementById("label_6").classList.remove('bad');
+                document.getElementById("label_6").classList.add('neutral');
+                document.getElementById("label_6").classList.remove('good');
+                document.getElementById("label_6").classList.remove('x-good');
+                document.getElementById("label_10").classList.remove('x-good-l');
+                ['label_8', 'label_6', 'label_7'].forEach(function(id) {
+                    document.getElementById(id).style.backgroundColor = "#FFBF00";
+
+                });
+                ['label_9', 'label_10'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+
+            } else if ($(this).val() == 4) {
+                document.getElementById("label_6").classList.remove('x-bad');
+                document.getElementById("label_6").classList.remove('bad');
+                document.getElementById("label_6").classList.remove('neutral');
+                document.getElementById("label_6").classList.add('good');
+                document.getElementById("label_6").classList.remove('x-good');
+                document.getElementById("label_10").classList.remove('x-good-l');
+
+                ['label_9', 'label_6', 'label_7', 'label_8'].forEach(function(id) {
+
+                    document.getElementById(id).style.backgroundColor = "#00CC22";
+
+                });
+                ['label_10'].forEach(function(id) {
+                    
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+
+            } else if ($(this).val() == 5) {
+                document.getElementById("label_6").classList.remove('x-bad');
+                document.getElementById("label_6").classList.remove('bad');
+                document.getElementById("label_6").classList.remove('neutral');
+                document.getElementById("label_6").classList.remove('good');
+                document.getElementById("label_6").classList.add('x-good');
+                document.getElementById("label_10").classList.add('x-good-l');
+                ['label_10', 'label_6', 'label_7', 'label_8', 'label_9'].forEach(function(id) {
+
+                    document.getElementById(id).style.backgroundColor = "green";
+
+                });
+            }
+        }else{
+                document.getElementById("label_1").classList.remove('x-bad');
+                
+        }
+
+    });
+
+    $('.checkbox3').change(function() {
+        if ($(this).is(":checked")) {
+            if ($(this).val() == 1) {
+                document.getElementById("label_11").classList.add('x-bad');
+                document.getElementById("label_11").classList.remove('bad');
+                document.getElementById("label_11").classList.remove('neutral');
+                document.getElementById("label_11").classList.remove('good');
+                document.getElementById("label_11").classList.remove('x-good');
+                document.getElementById("label_15").classList.remove('x-good-l');
+                ['label_12', 'label_13', 'label_14', 'label_15'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+            } else if ($(this).val() == 2) {
+                document.getElementById("label_11").classList.remove('x-bad');
+                document.getElementById("label_11").classList.add('bad');
+                document.getElementById("label_11").classList.remove('neutral');
+                document.getElementById("label_11").classList.remove('good');
+                document.getElementById("label_11").classList.remove('x-good');
+                document.getElementById("label_15").classList.remove('x-good-l');
+                ['label_11', 'label_12'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#FF6666";
+
+                });
+                ['label_13', 'label_14', 'label_15'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+
+
+            } else if ($(this).val() == 3) {
+                document.getElementById("label_11").classList.remove('x-bad');
+                document.getElementById("label_11").classList.remove('bad');
+                document.getElementById("label_11").classList.add('neutral');
+                document.getElementById("label_11").classList.remove('good');
+                document.getElementById("label_11").classList.remove('x-good');
+                document.getElementById("label_15").classList.remove('x-good-l');
+                ['label_11', 'label_12', 'label_13'].forEach(function(id) {
+                    document.getElementById(id).style.backgroundColor = "#FFBF00";
+
+                });
+                ['label_14', 'label_15'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+
+            } else if ($(this).val() == 4) {
+                document.getElementById("label_11").classList.remove('x-bad');
+                document.getElementById("label_11").classList.remove('bad');
+                document.getElementById("label_11").classList.remove('neutral');
+                document.getElementById("label_11").classList.add('good');
+                document.getElementById("label_11").classList.remove('x-good');
+                document.getElementById("label_15").classList.remove('x-good-l');
+
+                ['label_11', 'label_12', 'label_13', 'label_14'].forEach(function(id) {
+
+                    document.getElementById(id).style.backgroundColor = "#00CC22";
+
+                });
+                ['label_15'].forEach(function(id) {
+                    
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+
+            } else if ($(this).val() == 5) {
+                document.getElementById("label_11").classList.remove('x-bad');
+                document.getElementById("label_11").classList.remove('bad');
+                document.getElementById("label_11").classList.remove('neutral');
+                document.getElementById("label_11").classList.remove('good');
+                document.getElementById("label_11").classList.add('x-good');
+                document.getElementById("label_15").classList.add('x-good-l');
+                ['label_11', 'label_12', 'label_13', 'label_14', 'label_15'].forEach(function(id) {
+
+                    document.getElementById(id).style.backgroundColor = "green";
+
+                });
+            }
+        }else{
+                document.getElementById("label_11").classList.remove('x-bad');
+                
+        }
+
+    });
+
+    $('.checkbox4').change(function() {
+        if ($(this).is(":checked")) {
+            if ($(this).val() == 1) {
+                document.getElementById("label_16").classList.add('x-bad');
+                document.getElementById("label_16").classList.remove('bad');
+                document.getElementById("label_16").classList.remove('neutral');
+                document.getElementById("label_16").classList.remove('good');
+                document.getElementById("label_16").classList.remove('x-good');
+                document.getElementById("label_20").classList.remove('x-good-l');
+                ['label_17', 'label_18', 'label_19', 'label_20'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+            } else if ($(this).val() == 2) {
+                document.getElementById("label_16").classList.remove('x-bad');
+                document.getElementById("label_16").classList.add('bad');
+                document.getElementById("label_16").classList.remove('neutral');
+                document.getElementById("label_16").classList.remove('good');
+                document.getElementById("label_16").classList.remove('x-good');
+                document.getElementById("label_20").classList.remove('x-good-l');
+                ['label_16', 'label_17'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#FF6666";
+
+                });
+                ['label_18', 'label_19', 'label_20'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+
+
+            } else if ($(this).val() == 3) {
+                document.getElementById("label_16").classList.remove('x-bad');
+                document.getElementById("label_16").classList.remove('bad');
+                document.getElementById("label_16").classList.add('neutral');
+                document.getElementById("label_16").classList.remove('good');
+                document.getElementById("label_16").classList.remove('x-good');
+                document.getElementById("label_20").classList.remove('x-good-l');
+                ['label_16', 'label_17', 'label_18'].forEach(function(id) {
+                    document.getElementById(id).style.backgroundColor = "#FFBF00";
+
+                });
+                ['label_19', 'label_20'].forEach(function(id) {
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+
+            } else if ($(this).val() == 4) {
+                document.getElementById("label_16").classList.remove('x-bad');
+                document.getElementById("label_16").classList.remove('bad');
+                document.getElementById("label_16").classList.remove('neutral');
+                document.getElementById("label_16").classList.add('good');
+                document.getElementById("label_16").classList.remove('x-good');
+                document.getElementById("label_20").classList.remove('x-good-l');
+
+                ['label_16', 'label_17', 'label_18', 'label_19'].forEach(function(id) {
+
+                    document.getElementById(id).style.backgroundColor = "#00CC22";
+
+                });
+                ['label_20'].forEach(function(id) {
+                    
+
+                    document.getElementById(id).style.background = "#32557f";
+
+                });
+
+            } else if ($(this).val() == 5) {
+                
+                document.getElementById("label_16").classList.remove('x-bad');
+                document.getElementById("label_16").classList.remove('bad');
+                document.getElementById("label_16").classList.remove('neutral');
+                document.getElementById("label_16").classList.remove('good');
+                document.getElementById("label_16").classList.add('x-good');
+                document.getElementById("label_20").classList.add('x-good-l');
+
+                ['label_16', 'label_17', 'label_18', 'label_19'].forEach(function(id) {
+
+                    document.getElementById(id).style.backgroundColor = "green";
+
+                });
+            }
+        }else{
+                document.getElementById("label_16").classList.remove('x-bad');
+                
+        }
+
+    });
+
+
+
+    
+    // document.querySelector('input[name="res_rating"]:checked').value;
+   
+    //document.querySelector('input[name="comp_rating"]:checked').value;
+   
+    // document.querySelector('input[name="trust_rating"]:checked').value;
+    
+    // document.querySelector('input[name="cust_rating"]:checked').value;
+
+    let res_rating;
+    let comp_rating;
+    let trust_rating;
+    let cust_rating;
+$( "#Form" ).submit(function( event ) {
+ 
+
+  event.preventDefault();
+      
+  formValues = $(this).serializeArray();
+ 
+  if(formValues[0] != undefined){
+    res_rating = formValues[0].value;
+  }else{
+    res_rating = 0;
+  }
+
+  
+  if(formValues[1] != undefined){
+    comp_rating = formValues[1].value;
+  }else{
+    comp_rating = 0;
+  }
+
+  if(formValues[2] != undefined){
+    trust_rating = formValues[2].value;
+  }else{
+    trust_rating = 0;
+  }
+
+  if(formValues[3] != undefined){
+    cust_rating = formValues[3].value;
+  }else{
+    cust_rating = 0;
+  }
+
+  
+
+  send();
+  
+});
+
+
+      function send() {
+        
+         var res = check(res_rating);
+         console.log('Responsiveness = ' + res);
+
+         var comp = check(comp_rating);
+         console.log('Competency in advicing right solution = ' + comp);
+
+         var trust = check(trust_rating);
+         console.log('Trustworthiness = ' + trust);
+
+         var res = check(cust_rating);
+         console.log('Customer service and support = ' + res);
+
+        
+      }
+
+      function check(value){
+         
+          if(value == 1){
+              return  'Extremely Bad';
+          }else if(value == 2){
+            return 'Bad';
+          }else if(value == 3){
+            return 'Neutral';
+          }else if(value == 4){
+            return 'Good';
+          }else if(value == 5){
+            return 'Extremely Good';
+          }else{
+            return 'Not Rated!';
+          }
+      }
+
+    </script>
+
+</html>
